@@ -213,10 +213,10 @@ class Tkmap(tkinter.Canvas):
         # effect
         self["xscrollincrement"] = self["yscrollincrement"] = 1
         self["xscrollcommand"] = \
-            lambda a, b, f=tkinter.Frame(self, bg="systemHighlight")._w: \
+            lambda a, b, f=tkinter.Frame(self,)._w: \
             _xscroll(a, b, f)
         self["yscrollcommand"] = \
-            lambda a, b, f=tkinter.Frame(self, bg="systemHighlight")._w: \
+            lambda a, b, f=tkinter.Frame(self)._w: \
             _yscroll(a, b, f)
 
         self.coords = ttk.Label(
